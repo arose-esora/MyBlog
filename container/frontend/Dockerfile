@@ -5,4 +5,4 @@ ENV TZ Asia/Tokyo
 RUN mkdir src
 WORKDIR /src
 
-RUN apk update && apk upgrade
+RUN apt update && apt upgrade
