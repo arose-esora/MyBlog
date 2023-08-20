@@ -33,5 +33,19 @@
 </script>
 
 <style lang="scss" scope>
+    h1 {
+        font-size: 2rem;
+        font-weight: bold;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+
+    img {
+        width: 40%;
+        height: auto;
+    }
 
 </style>

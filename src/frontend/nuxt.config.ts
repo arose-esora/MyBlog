@@ -9,8 +9,13 @@ export default defineNuxtConfig({
   },
   app: {
     head: {
-      title: 'Test Title',
-      meta: [{ name: 'description', content: 'Test Description' }],
+      title: 'irohatech',
+      meta: [
+        { name: 'description', content: 'プログラミング、ブログ、AIの情報を丁寧に発信します。' },
+        { name: 'author', content: 'iroha' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+
+      ],
       link: [
         { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
         { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: 'anonymous' },
