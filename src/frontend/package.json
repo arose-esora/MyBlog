@@ -11,9 +11,12 @@
   "devDependencies": {
     "@nuxt/devtools": "latest",
     "@types/node": "^18.17.3",
-    "nuxt": "^3.6.5"
+    "node-sass": "^9.0.0",
+    "nuxt": "^3.6.5",
+    "sass-loader": "^13.3.2"
   },
   "dependencies": {
+    "sass": "^1.66.1",
     "vuetify": "^3.3.13"
   }
 }
