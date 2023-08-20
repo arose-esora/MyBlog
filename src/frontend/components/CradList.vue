@@ -1,13 +1,14 @@
 <template>
+  <div>
     <h1>Nuxt3 Jamstack Blogs</h1>
     <ul>
       <li v-for="blog in data?.contents" :key="blog.id">
         <NuxtLink :to="`/${blog.id}`">
           <img
-            :src="blog.eyecatch?.url"
-            :width="blog.eyecatch?.width"
-            :height="blog.eyecatch?.height"
-            alt=""
+          :src="blog.eyecatch?.url"
+          :width="blog.eyecatch?.width"
+          :height="blog.eyecatch?.height"
+          alt=""
           />
           <div>
             <div>
@@ -23,13 +24,13 @@
         </NuxtLink>
       </li>
     </ul>
-  </template>
+  </div>
+</template>
 
 <script setup lang="ts">
-    import { Blog } from "~~/types/Blog";
+    import { Blog } from "~/types/blog";
 
     const { data } = await useMicroCMSGetList<Blog>({
         endpoint: "blogs",
     });
-    console.log(data)
 </script>

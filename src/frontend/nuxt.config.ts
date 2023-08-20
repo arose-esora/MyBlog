@@ -3,7 +3,8 @@ export default defineNuxtConfig({
   css: [
     '/assets/css/style.min.css',
     '/assets/css/variables.min.css',
-    'vuetify/lib/styles/main.sass'],
+    'vuetify/lib/styles/main.sass'
+  ],
   build: {
     transpile: ['vuetify'],
   },

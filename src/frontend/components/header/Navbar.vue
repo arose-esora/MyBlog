@@ -23,7 +23,7 @@
     </nav>
 </template>
 
-<style lang="scss" scoped>
+<style scope lang="scss">
     nav {
         display: flex;
         justify-content: space-around;

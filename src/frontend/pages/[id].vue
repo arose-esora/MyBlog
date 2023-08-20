@@ -1,5 +1,5 @@
 <template>
-    <template v-if="data">
+    <div v-if="data">
         <h1>
             {{ data.title }}
         </h1>
@@ -7,7 +7,7 @@
             :src="data.eyecatch?.url"
             :width="data.eyecatch?.width"
             :height="data.eyecatch?.height"
-            alt=""
+            alt="eye catch"
         />
         <div>
             <div>
@@ -18,11 +18,11 @@
             </div>
         </div>
         <div v-html="data.content"></div>
-    </template>
+    </div>
 </template>
 
 <script setup lang="ts">
-    import { Blog } from "~~/types/blog";
+    import { Blog } from "~/types/blog";
 
     const { params } = useRoute();
 
@@ -32,7 +32,7 @@
     });
 </script>
 
-<style lang="scss" scope>
+<style scope lang="scss">
     h1 {
         font-size: 2rem;
         font-weight: bold;
@@ -47,5 +47,4 @@
         width: 40%;
         height: auto;
     }
-
 </style>

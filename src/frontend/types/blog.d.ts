@@ -1,5 +1,5 @@
 import type { MicroCMSImage, MicroCMSListContent } from "microcms-js-sdk";
-import { Category } from "./Category";
+import { Category } from "./category";
 
 export type Blog = {
     title?: string;
