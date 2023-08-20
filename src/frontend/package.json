@@ -16,6 +16,7 @@
     "sass-loader": "^13.3.2"
   },
   "dependencies": {
+    "nuxt-microcms-module": "^3.0.2",
     "sass": "^1.66.1",
     "vuetify": "^3.3.13"
   }

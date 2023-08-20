@@ -1,2 +1,2 @@
-html{font-size:16px;font-size:clamp(12px,3.2vw,18px)}body{margin:0}h1{color:red}
+html{font-size:16px;font-size:clamp(12px,3.2vw,18px)}body{margin:0;font-family:var(--noto-sans)}
 /*# sourceMappingURL=style.min.css.map */

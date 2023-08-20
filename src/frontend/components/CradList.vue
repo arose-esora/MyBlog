@@ -1,11 +1,35 @@
 <template>
-    <v-app id="inspire">
-        <v-container>
-            <v-row>
-                <v-col cols="12" sm="6" md="4" v-for="n in 6" :key="n">
-                    <ArticleCard />
-                </v-col>
-            </v-row>
-        </v-container>
-    </v-app>
-</template>
+    <h1>Nuxt3 Jamstack Blogs</h1>
+    <ul>
+      <li v-for="blog in data?.contents" :key="blog.id">
+        <NuxtLink :to="`/${blog.id}`">
+          <img
+            :src="blog.eyecatch?.url"
+            :width="blog.eyecatch?.width"
+            :height="blog.eyecatch?.height"
+            alt=""
+          />
+          <div>
+            <div>
+              {{ blog.category?.name }}
+            </div>
+            <div>
+              {{ blog.title }}
+            </div>
+            <div>
+              {{ blog.publishedAt ?? blog.createdAt }}
+            </div>
+          </div>
+        </NuxtLink>
+      </li>
+    </ul>
+  </template>
+
+<script setup lang="ts">
+    import { Blog } from "~~/types/Blog";
+
+    const { data } = await useMicroCMSGetList<Blog>({
+        endpoint: "blogs",
+    });
+    console.log(data)
+</script>

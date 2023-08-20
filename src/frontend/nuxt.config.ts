@@ -29,6 +29,11 @@ export default defineNuxtConfig({
     },
     pageTransition: { name: 'page', mode: 'out-in' },
   },
+  modules: ["nuxt-microcms-module"],
+  microCMS: {
+    serviceDomain: process.env.MICROCMS_SERVICE_DOMAIN,
+    apiKey: process.env.MICROCMS_API_KEY,
+  },
   vue: {
     compilerOptions: {
       isCustomElement: tag => tag.startsWith('ion-')

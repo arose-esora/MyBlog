@@ -1,9 +1,9 @@
 <template>
     <nav>
         <NuxtLink to="/">Home</NuxtLink>
-        <NuxtLink to="/subtest">Contents</NuxtLink>
+        <NuxtLink to="/">Contents</NuxtLink>
         <NuxtLink to="/about">About</NuxtLink>
-        <NuxtLink to="/about">Contact</NuxtLink>
+        <NuxtLink to="/contact">Contact</NuxtLink>
     </nav>
 </template>
 
@@ -17,12 +17,11 @@
         a {
             color: var(--text-white);
             text-decoration: none;
-            position: relative; /* 追加 */
-            overflow: hidden;   /* 追加 */
-            font-size: 1.2rem;
+            position: relative;
+            overflow: hidden;
             transition: 0.3s;
 
-            &::before { /* 追加: 疑似要素を使用して下線を作成 */
+            &::before {
                 content: '';
                 position: absolute;
                 width: 0;
@@ -39,7 +38,7 @@
 
             @include hover {
                 transform: scale(1.2);
-                &::before { /* 追加: hover時に線の幅を変更 */
+                &::before {
                     width: 100%;
                 }
             }
