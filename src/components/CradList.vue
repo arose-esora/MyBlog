@@ -1,6 +1,5 @@
 <template>
   <div>
-    <h1>Nuxt3 Jamstack Blogs</h1>
     <ul>
       <li v-for="blog in data?.contents" :key="blog.id">
         <NuxtLink :to="`/${blog.id}`">
@@ -30,7 +29,9 @@
 <script setup lang="ts">
     import { Blog } from "~/types/blog";
 
-    const { data } = await useMicroCMSGetList<Blog>({
+    const { data, status } = await useMicroCMSGetList<Blog>({
         endpoint: "blogs",
     });
+    console.log(JSON.parse(JSON.stringify(data)));
+    console.log(JSON.parse(JSON.stringify(status)));
 </script>

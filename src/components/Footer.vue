@@ -1,6 +1,6 @@
 <template>
     <footer>
-        <p>&copy; 2023 irohatech All rights reserved.</p>
+        <p>&copy; 2023 irohatech</p>
     </footer>
 </template>
 
@@ -10,5 +10,6 @@
         color: var(--text-white);
         font-family: var(--noto-sans);
         text-align: center;
+        margin-top: 5px;
     }
 </style>
