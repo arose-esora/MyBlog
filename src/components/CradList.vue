@@ -27,11 +27,10 @@
 </template>
 
 <script setup lang="ts">
-    import { Blog } from "~/types/blog";
+  import { Blog } from "~/types/blog";
 
-    const { data, status } = await useMicroCMSGetList<Blog>({
-        endpoint: "blogs",
-    });
-    console.log(JSON.parse(JSON.stringify(data)));
-    console.log(JSON.parse(JSON.stringify(status)));
+  const { data } = await useMicroCMSGetList<Blog>({
+    endpoint: "blogs",
+  });
+  console.log(data);
 </script>

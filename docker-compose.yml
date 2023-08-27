@@ -3,7 +3,7 @@ version: '3'
 services:
   frontend: #Vue.js
     container_name: frontend
-    build: ./container/frontend
+    build: .
     ports:
       - "3000:3000"
       - "24678:24678"
